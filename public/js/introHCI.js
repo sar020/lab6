@@ -9,8 +9,9 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	$('.project a').click(addProjectDetails);
-
+	$('.project a').click(addProjectDetails).preventDefault(){
+		$.get("/project", callBackFn);
+	}
 	$('#colorBtn').click(randomizeColors);
 }
 
